@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="sq">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./css/contact.css" />
+    <title>Imaginative | CONTACT</title>
+  </head>
+
+  <body>
+    <div class="social-top" id="social-top">
+      <div class="social-top-content">
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-pinterest"></i></a>
+          <a href="#"><i class="fab fa-google-plus-g"></i></a>
+          <a href="#"><i class="fas fa-rss-square"></i></a>
+        </div>
+        <div class="social-links">
+          <a href="#">Sign Up |</a>
+          <a href="#">Login |</a>
+          <a href="#">RSS Feeds |</a>
+          <a href="#">Archived News</a>
+        </div>
+      </div>
+      <div class="social-btn">
+        <span id="social-btn-expand"><i class="fas fa-minus" id="social-icon"></i></span>
+      </div>
+    </div>
+
+    <header class="main-header">
+      <div class="container-fluid">
+        <div class="header-top">
+          <div class="header-logo">
+            <img src="images/logo.png" alt="Logo" />
+          </div>
+          <div class="header-search">
+            <input type="text" class="search-input" id="searchBox" list="destinations" placeholder="Search Our Website..." />
+            <datalist id="destinations">
+                <option value="Paris">
+                <option value="Rome">
+                <option value="London">
+                <option value="Bali">
+            </datalist>
+            <input type="submit" class="search-btn" value="SUBMIT" />
+          </div>
+        </div>
+
+        <nav class="navbar">
+          <ul class="nav-menu">
+            <li class="nav-item"><a href="index.html" class="nav-link">HOME</a></li>
+            <li class="nav-item"><a href="about.html" class="nav-link">ABOUT US</a></li>
+            <li class="nav-item"><a href="offers.html" class="nav-link">OFFERS</a></li>
+            <li class="nav-item"><a href="travel.html" class="nav-link">TRAVEL</a></li>
+            <li class="nav-item"><a href="contact.html" class="nav-link">CONTACT</a></li>
+            <li class="nav-item">
+      <a href="http://localhost:3000" class="nav-link" style="color: #eee8ea; ;">REZERVO</a>
+    </li>
+          </ul>
+        </nav>
+        <span class="header-space"></span>
+      </div>
+    </header>
+
+    <main>
+      <section>
+        <div class="container">
+          <h3 style="color: #97445e; margin-top: 20px;">Na Kontaktoni</h3>
+          <div class="contact-container" style="display: flex; gap: 20px; flex-wrap: wrap;">
+            
+            <form action="#" id="main-form" style="flex: 1; min-width: 300px;">
+              <label for="name"><span class="required">* </span> Emri:</label>
+              <input type="text" name="name" id="name" placeholder="Emri juaj" required />
+
+              <label for="email"><span class="required">* </span>Email:</label>
+              <input type="email" name="email" id="email" placeholder="Email adresa" required />
+
+              <label for="phone">Telefoni (p.sh +383...):</label>
+              <input type="text" name="phone" id="phone" placeholder="+383 44 123 456" />
+
+              <label for="message"><span class="required">* </span>Mesazhi:</label>
+              <textarea name="message" id="message" placeholder="Shkruani mesazhin këtu..." cols="30" rows="5"></textarea>
+              
+              <p class="required">* Fushat e shënuara janë të obligueshme!</p>
+              
+              <input type="button" value="Dërgo" id="sendMessage" onclick="validatePhoneNumber()" style="background-color: #97445e; color: white; border: none; padding: 10px 20px; cursor: pointer;" />
+            </form>
+
+            <div class="map-container" style="flex: 1; min-width: 300px;">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2934.356233519129!2d21.1555555!3d42.6666666!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13549ee1555a6d57%3A0x6b49e103986702e7!2sPrishtina!5e0!3m2!1sen!2s!4v1700000000000!5m2!1sen!2s" 
+                    width="100%" 
+                    height="400" 
+                    style="border:0; border-radius: 8px;" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="react-app" style="padding: 40px 0; background: #f4f4f4; text-align: center;">
+          </section>
+
+    </main>
+
+    <footer class="main-footer">
+      <div class="container">
+        Copyright © 2025 - Të gjitha të drejtat e rezervuara - Imaginative Tourism
+      </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="./js/contact.js"></script>
+  </body>
+</html>

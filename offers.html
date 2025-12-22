@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" manifest="demo.appcache">
-  <head>
+<html lang="sq" manifest="demo.appcache"> <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
@@ -11,10 +10,44 @@
     />
     <title>Imaginative | OFFERS</title>
     <link rel="stylesheet" href="css/offers.css" />
+    <style>
+      /* Stilizimi i tabelës për pikat 41 */
+      .offers-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 40px 0;
+        font-family: Georgia, serif;
+      }
+      .offers-table caption {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+        font-weight: bold;
+        color: #97445e;
+      }
+      .offers-table th, .offers-table td {
+        border: 1px solid #ddd;
+        padding: 12px;
+        text-align: center;
+      }
+      .offers-table thead {
+        background-color: #97445e;
+        color: white;
+      }
+      /* Pika 41: Zebra striping */
+      .offers-table tbody tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }
+      .offers-table tbody tr:hover {
+        background-color: #ddd;
+      }
+      .offers-table tfoot {
+        font-weight: bold;
+        background-color: #ebebeb;
+      }
+    </style>
   </head>
 
   <body>
-    <!-- Social icons -->
     <div class="social-top" id="social-top">
       <div class="social-top-content">
         <div class="social-icons">
@@ -39,7 +72,6 @@
     </div>
 
     <header class="main-header">
-      <!-- Navigation menu -->
       <div class="container-fluid">
         <div class="header-top">
           <div class="header-logo">
@@ -49,7 +81,6 @@
             <input
               type="text"
               class="search-input"
-              name=""
               id="searchBox"
               placeholder="Search Our Website..."
             />
@@ -59,104 +90,94 @@
 
         <nav class="navbar">
           <ul class="nav-menu">
+            <li class="nav-item"><a href="index.html" class="nav-link">HOME</a></li>
+            <li class="nav-item"><a href="about.html" class="nav-link">ABOUT US</a></li>
+            <li class="nav-item"><a href="offers.html" class="nav-link">OFFERS</a></li>
+            <li class="nav-item"><a href="travel.html" class="nav-link"> TRAVEL </a></li>
+            <li class="nav-item"><a href="contact.html" class="nav-link">CONTACT</a></li>
             <li class="nav-item">
-              <a href="index.html" class="nav-link">HOME</a>
-            </li>
-
-            <li class="nav-item">
-              <a href="about.html" class="nav-link">ABOUT US</a>
-            </li>
-            <li class="nav-item">
-              <a href="offers.html" class="nav-link">OFFERS</a>
-            </li>
-            <li class="nav-item">
-              <a href="travel.html" class="nav-link"> TRAVEL </a>
-            </li>
-
-            <li class="nav-item">
-              <a href="contact.html" class="nav-link">CONTACT</a>
-            </li>
+      <a href="http://localhost:3000" class="nav-link" style="color: #eee8ea; ;">REZERVO</a>
+    </li>
           </ul>
         </nav>
         <span class="header-space"></span>
       </div>
     </header>
+
     <main>
       <div class="container">
-        <img
-          src="images/offers_img/SpecialOffers.jfif"
-          alt="SpecialOffers"
-          width="100%"
-        />
+        <img src="images/offers_img/SpecialOffers.jfif" alt="SpecialOffers" width="100%" />
       </div>
 
       <section>
-        <div id="offers-2026" class="container">
+        <div id="offers-2021" class="container">
           <h1>New Year 2026 Offers</h1>
 
           <div id="grid-offers">
             <div class="offers">
-              <div class="offer-img">
-                <img
-                  class="offersImg"
-                  src="images/offers_img/banff canada.jpg"
-                  alt=""
-                />
-              </div>
-              <div class="offer-title">
-                <h3>Banff,Canada</h3>
-              </div>
+              <div class="offer-img"><img class="offersImg" src="images/offers_img/banff canada.jpg" alt="" /></div>
+              <div class="offer-title"><h3>Banff, Canada</h3></div>
             </div>
-
             <div class="offers">
-              <div class="offer-img">
-                <img
-                  class="offersImg"
-                  src="images/offers_img/bavaria,Germany.jpg"
-                  alt=""
-                />
-              </div>
-              <div class="offer-title">
-                <h3>Bavaria Germany</h3>
-              </div>
+              <div class="offer-img"><img class="offersImg" src="images/offers_img/bavaria,Germany.jpg" alt="" /></div>
+              <div class="offer-title"><h3>Bavaria, Germany</h3></div>
             </div>
-
             <div class="offers">
-              <div class="offer-img">
-                <img
-                  class="offersImg"
-                  src="images/offers_img/holland-peak-ranch-1574711041.jpg"
-                  alt=""
-                />
-              </div>
-              <div class="offer-title">
-                <h3>Holland Peak Ranch</h3>
-              </div>
+              <div class="offer-img"><img class="offersImg" src="images/offers_img/holland-peak-ranch-1574711041.jpg" alt="" /></div>
+              <div class="offer-title"><h3>Holland Peak Ranch</h3></div>
             </div>
-
             <div class="offers">
-              <div class="offer-img">
-                <img
-                  class="offersImg"
-                  src="images/offers_img/saariselka, finland.jpg"
-                  alt=""
-                />
-              </div>
-              <div class="offer-title">
-                <h3>Saariselka, Finland</h3>
-              </div>
+              <div class="offer-img"><img class="offersImg" src="images/offers_img/saariselka, finland.jpg" alt="" /></div>
+              <div class="offer-title"><h3>Saariselka, Finland</h3></div>
             </div>
           </div>
+
+          <table class="offers-table">
+            <caption>Detajet e Çmimeve për Paketat 2021</caption> <thead> <tr>
+                <th>Destinacioni</th> <th>Kohëzgjatja</th>
+                <th>Personat</th>
+                <th>Çmimi</th>
+              </tr>
+            </thead>
+            <tbody> <tr>
+                <td>Banff, Canada</td>
+                <td>7 Ditë</td>
+                <td>2</td>
+                <td>1200€</td>
+              </tr>
+              <tr>
+                <td>Bavaria, Germany</td>
+                <td>5 Ditë</td>
+                <td>2</td>
+                <td>850€</td>
+              </tr>
+              <tr>
+                <td>Holland Peak Ranch</td>
+                <td>10 Ditë</td>
+                <td>4</td>
+                <td>2500€</td>
+              </tr>
+              <tr>
+                <td>Saariselka, Finland</td>
+                <td>6 Ditë</td>
+                <td>2</td>
+                <td>1100€</td>
+              </tr>
+            </tbody>
+            <tfoot> <tr>
+                <td colspan="3">Totali Mesatar i Kursimit</td>
+                <td>-15% OFF</td>
+              </tr>
+            </tfoot>
+          </table>
+          
         </div>
       </section>
+
       <div class="container">
         <div id="offer-message">
-          <div id="img">
-            <img src="images/offers_img/Offers.png" alt="Foto" width="100%" />
-          </div>
-          <div id="message">
-            <p><strong>New Offers Coming Soon....</strong></p>
-          </div>
+          <div id="img"><img src="images/offers_img/Offers.png" alt="Foto" width="100%" /></div>
+          <div id="message"><p><strong>New Offers Coming Soon....</strong></p></div>
         </div>
       </div>
     </main>
@@ -166,8 +187,8 @@
         Copyright &copy; 2025 - All rights reserved - Imaginative
       </div>
     </footer>
-   
-    
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="./js/offers.js"></script>
   </body>
 </html>
-
