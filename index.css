@@ -4,484 +4,266 @@
   --white: #ffffff;
   --grey: #ebebeb;
 }
+
 * {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-html,
-body {
+
+html, body {
   width: 100%;
-  height: 100%;
-}
-html,
-body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
   font-family: Georgia, "Times New Roman", Times, serif, sans-serif;
   font-size: 14px;
   line-height: 1.5;
 }
-body {
-  margin: 0;
-  padding: 0;
-  font-size: 100%;
-  background-color: #ffffff;
-}
+
+/* --- Containers (Rregulluar për Responsive) --- */
 .container {
-  width: 1140px;
+  width: 90%;
+  max-width: 1140px;
   margin: 0 auto;
 }
 
 .container-fluid {
-  width: 1200px;
+  width: 95%;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
+/* --- Social Top --- */
 .social-top {
   background-color: #ffffff;
   border-bottom: 1px solid #97455f;
   padding: 10px;
   position: relative;
-  transition: all 350ms ease-in-out;
 }
+
 .social-top-content {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap; /* Kjo e rregullon në mobile */
 }
 
-.social-icons {
-  display: flex;
-}
+.social-icons { display: flex; }
 
 .social-icons a {
   background-color: #d2d2d2;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 33px;
-  height: 33px;
-  margin-left: 5px;
-  margin-right: 5px;
+  width: 33px; height: 33px;
+  margin: 0 5px;
   text-decoration: none;
   border-radius: 50px;
 }
 
-.social-icons a:hover {
-  background-color: #ee802f;
-  cursor: pointer;
-}
-.social-icons a i {
-  font-size: 18px;
-  color: #ffffff;
-  text-align: center;
-}
+.social-icons a:hover { background-color: #ee802f; }
+.social-icons a i { font-size: 18px; color: #ffffff; }
 
-.social-links a {
-  color: #97455f;
-  padding: 0 5px;
-  text-decoration: none;
-}
-.social-btn {
-  background-color: #97455f;
-  position: absolute;
-  right: 15px;
-  top: 100%;
-  display: inline-block;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-}
+.social-links a { color: #97455f; padding: 0 5px; text-decoration: none; }
 
-.social-btn #social-btn-expand {
-  display: block;
-  padding: 2px 10px;
-}
-
-.social-btn #social-btn-expand:hover {
-  cursor: pointer;
-}
-.social-btn #social-btn-expand i {
-  color: #ffffff;
-}
-.showhide {
-  margin-top: -54px;
-}
-
-.main-header {
-  width: 100%;
-  height: auto;
-  background-color: #ebebeb;
-}
+/* --- Header & Nav --- */
+.main-header { width: 100%; background-color: #ebebeb; }
 
 .header-top {
-  position: relative;
-  height: 140px;
+  min-height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 10px 0;
 }
 
-.header-logo {
-  position: relative;
-  display: inline-block;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.header-search {
-  position: relative;
-  display: inline-block;
-  float: right;
-  top: 50%;
-  transform: translateY(-50%);
-}
+/* Hoqa transform: translateY sepse Flexbox e bën vetë qendërsimin */
+.header-logo, .header-search { position: static; }
 
 .navbar {
   background-color: #97455f;
-  position: relative;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
 }
-.header-space {
-  background-color: #ffffff;
-  width: 100%;
-  height: 70px;
-  position: relative;
-  display: block;
-  /* box-shadow: 0px -15px 15px rgba(0, 0, 0, .15); */
-}
 
-.nav-menu {
-  margin: 0;
-  padding: 0;
-}
+.nav-menu { margin: 0; padding: 0; display: flex; flex-wrap: wrap; }
+.nav-item { list-style: none; }
+.nav-link { color: #ffffff; padding: 20px; display: block; text-decoration: none; }
+.nav-link-active { background-color: #79364b; }
 
-.nav-item {
-  list-style: none;
-  display: inline-block;
-}
-
-.nav-link {
-  color: #ffffff;
-  padding: 20px;
-  display: block;
-  text-decoration: none;
-}
-
+/* --- Search Box --- */
 .search-input {
-  background-color: #ffffff;
-  border: none;
-  padding: 10px 15px;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 0px;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 0px;
+  border: none; padding: 10px 15px;
+  border-radius: 5px 0 0 5px;
 }
-
 .search-btn {
-  cursor: pointer;
-  background-color: #97455f;
-  color: #ffffff;
-  border: none;
-  margin-left: -4px;
-  padding: 10px;
-  border-top-right-radius: 5px;
-  border-top-left-radius: 0px;
-  border-bottom-right-radius: 5px;
-  border-bottom-left-radius: 0px;
-}
-.search-btn:hover {
-  background-color: #88394d;
-}
-.nav-link-active {
-  background-color: #79364b;
-}
-.main-footer {
-  background-color: #ebebeb;
-  padding: 22px 0px;
-  border-top: 1px solid #a5a5a5;
+  cursor: pointer; background-color: #97455f; color: #ffffff;
+  border: none; margin-left: -4px; padding: 10px;
+  border-radius: 0 5px 5px 0;
 }
 
-/* Slideshow --start*/
-#slide-show > .container > .slide-container {
+/* --- Slideshow (Rregulluar për të mos u prerë në mobile) --- */
+#slide-show .slide-container {
   display: flex;
-  align-items: center;
   justify-content: center;
-  text-align: center;
-  min-height: 100vh;
-  margin-top: -150px;
+  margin-bottom: 40px;
 }
-.slide-container > .content {
-  height: 400px;
-  width: 950px;
+
+.slide-container .content {
+  width: 100%;
+  max-width: 950px;
   position: relative;
 }
-.slide-container > .content .images {
-  height: 100%;
-  width: 100%;
-}
+
 .content .images img {
-  height: 100%;
   width: 100%;
+  height: auto; /* Ruaj proporcionin e fotos */
+  display: block;
 }
+
 .btm-slides {
-  position: absolute;
-  top: 420px;
-  left: 50%;
-  transform: translateX(-50%);
   display: flex;
+  justify-content: center;
+  margin-top: 15px;
 }
+
 .btm-slides span {
-  height: 15px;
-  width: 15px;
+  height: 15px; width: 15px;
   border: 2px solid #333;
   border-radius: 50%;
   margin: 0 3px;
   cursor: pointer;
 }
 
-/*SLideshow --end*/
-
-/* 
-Review from Clients  -- Start
-
-*/
-
-.container > .title {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+/* --- Reviews & Project Rows --- */
 .row {
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
   justify-content: space-around;
-}
-#clientsReviews > .row {
   margin-bottom: 25px;
 }
-.review {
-  display: flex;
-  max-width: 310px;
-}
-.user {
-  margin-right: 1rem;
-}
-.review-content > .review-text {
-  color: #d2d2d2;
-}
-.review-content > .reviewer-name {
-  margin-top: -2px;
-}
-#reviews {
-  width: 100%;
-  text-align: center;
+
+.review { display: flex; flex: 1 1 300px; max-width: 310px; }
+.user { margin-right: 1rem; }
+.reviewer-name { color: #97455f; }
+
+.project-title, #reviews {
+  width: 100%; text-align: center;
   border-bottom: 3px solid #d2d2d2;
-  line-height: 0.1em;
-  margin: 10px 0 20px;
+  line-height: 0.1em; margin: 20px 0;
 }
 
-#reviews span {
-  background: #fff;
-  padding: 0 10px;
-}
-.reviewer-name {
-  color: #97455f;
-}
+.project-title span, #reviews span { background: #fff; padding: 0 10px; }
 
-/*Review from Clients -- End*/
-/*Project -- Start*/
-#project > .row {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-}
-#project > .row > .col {
-  max-width: 550px;
-
-  margin-right: 25px;
-}
-.col-body {
-  display: flex;
-  flex-direction: row;
-}
-.project-title {
-  width: 100%;
-  text-align: center;
-  border-bottom: 3px solid #d2d2d2;
-  line-height: 0.1em;
-  margin: 10px 0 20px;
-  color: #333333;
-}
-.project-title > .title-space {
-  background: #fff;
-  padding: 0 10px;
-}
-.content-img {
-  margin-right: 10px;
-  margin-top: 15px;
-}
-
-#magazine-img {
-  border-radius: 50%;
-}
-#read-more {
-  text-decoration: none;
-  color: #97445e;
-}
-
-.purple {
-  color: #97445e;
-}
-.content-top {
-  display: flex;
-  flex-direction: row;
-}
-.fa-quote-left {
-  font-size: 45px;
-  color: #ebebeb;
-  margin-top: 15px;
-  margin-right: 15px;
-}
-.column {
-  display: flex;
-  flex-direction: column;
-}
-.project-desc {
-  margin-top: -10px;
-}
-
-/*Project -- End*/
-/*Banner --Start */
-
+/* --- Banner --- */
 #banner {
   display: flex;
+  flex-wrap: wrap;
   background-color: #97455f;
   color: white;
+  padding: 20px;
   justify-content: space-evenly;
   border-radius: 10px;
-  margin: 40px 0 45px 0;
+  margin: 40px 0;
+  text-align: center;
 }
-#banner-text {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin-left: 25px;
-  font-family: Georgia Pro, "Times New Roman", Times, serif;
-}
-#banner-button {
-  display: flex;
-  align-items: center;
-  margin-right: 25px;
-}
-#banner-text > h2 {
-  margin-bottom: -0.2rem;
+
+#banner-button #contact-button {
   font-size: 2rem;
-}
-#banner-text > p {
-  font-size: 18px;
-  margin-top: -2px;
-}
-#banner-button > #contact-button {
-  font-size: 2.5rem;
-  font-family: Georgia Pro, "Times New Roman", Times, serif;
+  padding: 10px 20px;
   color: #97455f;
+  background: white;
   border-radius: 10px;
-  border: 1px solid #ffffff;
-  box-shadow: 0;
+  border: none;
 }
 
-/*Banner --End*/
-
-/*----------------------*/
-/*Blog posts, company details,contact form --Start*/
-
+/* --- Last Section (Blog, Details, Form) --- */
 #lastSection {
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
   background-color: #ebebeb;
   border-top: 4px solid #d2d2d2;
-  font-family: Abula thin;
-}
-.post {
-  display: flex;
-  flex-direction: row;
+  padding: 40px 0;
 }
 
-/*****/
-#blogPosts,
-#companyDetails,
-#contactForm {
-  /* max-width: 500px; */
-  margin: 0 45px 20px 45px;
+#blogPosts, #companyDetails, #contactForm {
+  flex: 1 1 300px;
+  margin: 0 20px 20px;
   color: #8c8c8c;
 }
 
-.blog-title,
-.details-title,
-.contact-form-title {
-  color: #000000;
-  margin-bottom: 30px;
-}
-.post {
-  margin-bottom: 35px;
-}
-.post-image {
-  margin-right: 15px;
-}
-.post-content > .post-title {
-  margin-top: -1px;color: #97445e;
-}
-#companyDetails > #info {
-  color: #8c8c8c;
-}
-#info,
-#contact,
-#schedule {
-  margin-bottom: 30px;
-}
-#info > p,
-#contact > p,
-#schedule > p {
-  margin-top: -14px;
-}
-#contact > .email {
-  color: #97445e;
-}
-#contactForm > #firstForm {
-  display: flex;
-  flex-direction: column;
-}
-#firstForm > input,
-textarea {
-  border: solid 1px #fff;
-  font-family: Abula thin;
-  border-radius: 5px;
-  margin-bottom: 10px;
-  font-size: 16px;
-  text-indent: 5px;
-}
-#firstForm > input {
-  height: 35px;
+#firstForm { display: flex; flex-direction: column; }
+#firstForm input, textarea {
+  border-radius: 5px; border: 1px solid #fff;
+  margin-bottom: 10px; padding: 10px;
 }
 
-input:focus,
-textarea:focus {
-  outline: none !important;
-  border: 1px solid #97455e;
-  box-shadow: 0 0 10px #97445e;
-}
 #sendMessage {
-  height: 35px;
-  width: 35%;
-  text-transform: uppercase;
-  font-size: 16px;
-  color: #fff;
-  background-color: #97455f;
-  border-radius: 4px;
-  border: 1px solid #fff;
-  font-family: Cobblestones Regular;
-}
-.color {
-  color: #97455f;
-}
-#firstForm > #name {
-  margin-top: -12px;
+  background-color: #97455f; color: white;
+  border: none; padding: 10px; cursor: pointer;
 }
 
+/* --- MEDIA QUERIES --- */
+@media (max-width: 768px) {
+  .header-top { flex-direction: column; }
+  .nav-menu { justify-content: center; }
+  #banner { flex-direction: column; align-items: center; }
+  #banner-text { margin-bottom: 20px; }
+  .col-body { flex-direction: column; align-items: center; text-align: center; }
+}
+
+
+
+
+
+
+/* RREGULLIMI I NAVBAR-IT PËR MOBILE  */
+
+@media (max-width: 768px) {
+   
+    .nav-menu {
+        display: flex;
+        flex-direction: column; 
+        width: 100%;
+        padding: 0;
+    }
+
+    
+    .nav-item {
+        display: block; 
+        width: 100%;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Një vijë e hollë ndarëse */
+    }
+
+    .nav-link {
+        padding: 15px 20px;
+        text-align: center; 
+    }
+
+    /* 3. Header-i dhe Search-i */
+    .header-top {
+        height: auto; 
+        padding: 20px 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .header-logo, .header-search {
+        position: static; 
+        transform: none;
+        float: none;
+        display: block;
+        text-align: center;
+    }
+
+    .search-input {
+        width: 65%; 
+    }
+    
+    .navbar {
+        border-radius: 0; 
+    }
+}
